@@ -235,8 +235,21 @@ export default function PartnerPage({ options }: { options: PartnershipOptions |
               }}
               noValidate
             >
-              {/* honeypot: hidden from people, filled by bots */}
-              <input className="px-hp" type="text" name="website_hp" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+              {/* honeypot: hidden from people, filled by bots. The name is
+                  deliberately meaningless so browser autofill and password
+                  managers leave it alone. */}
+              <div className="px-hp" aria-hidden="true">
+                <input
+                  type="text"
+                  name="dt_hp_7c1e"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  data-1p-ignore
+                  data-lpignore="true"
+                  data-bwignore
+                  data-form-type="other"
+                />
+              </div>
 
               {/* ── A. Contact ── */}
               <div className="px-sec"><span>01</span><h2>Contact information</h2></div>

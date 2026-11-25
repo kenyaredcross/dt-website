@@ -3277,7 +3277,7 @@ a.pd-partner:hover { background: #eee; }
 .cx-field.bad input, .cx-field.bad textarea, .cx-field.bad select { border-color: #ff7a73; }
 .px-chips.bad .cx-tab:not(.on) { border-color: rgba(255,122,115,.55); }
 
-.px-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.px-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
 
 .px-steps { margin: 6px 0 0; padding: 0; list-style: none; counter-reset: pxs; display: flex; flex-direction: column; gap: 14px; }
 .px-steps li { counter-increment: pxs; position: relative; padding-left: 36px; font-size: 15px; line-height: 1.5; color: var(--mute); }
