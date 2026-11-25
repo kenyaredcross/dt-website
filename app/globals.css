@@ -3236,6 +3236,64 @@ a.pd-partner:hover { background: #eee; }
 .cx-submit { margin-top: 8px; border: none; font-family: inherit; cursor: pointer; }
 .cx-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; }
 
+.cx-note { margin: -16px 0 26px; font-size: 14px; color: rgba(255,255,255,.7); }
+.cx-note a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ─── Partnership form (extends the contact .cx styles) ─────── */
+.px-sec { display: flex; align-items: baseline; gap: 14px; margin: 8px 0 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.1); }
+.px-card .px-sec:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.px-sec span { font-size: 12px; font-weight: 800; letter-spacing: .16em; color: var(--red); }
+.px-sec h2 { margin: 0; font-size: clamp(20px, 2.2vw, 28px); font-weight: 800; letter-spacing: -.03em; line-height: 1.1; color: #fff; }
+
+.cx-field select {
+  display: block;
+  width: 100%;
+  padding: 15px 44px 15px 18px;
+  border: 1.5px solid rgba(255,255,255,.16);
+  border-radius: 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #fff;
+  background: rgba(255,255,255,.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 18px center;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
+  transition: border-color .2s, background-color .2s, box-shadow .2s;
+}
+.cx-field select option { color: var(--ink); background: #fff; }
+.cx-field select:focus { border-color: var(--red); background-color: rgba(255,255,255,.08); box-shadow: 0 0 0 3px rgba(237,28,36,.25); }
+.cx-field input[type="date"] { color-scheme: dark; }
+
+.px-chips { border: none; padding: 0; margin: 0 0 22px; min-width: 0; }
+.px-chips legend { padding: 0; margin-bottom: 12px; font-size: 13px; font-weight: 600; letter-spacing: .02em; color: rgba(255,255,255,.88); }
+.px-chips legend i { font-style: normal; font-weight: 400; color: rgba(255,255,255,.45); }
+.px-chips legend small { display: block; margin-top: 3px; font-size: 12px; font-weight: 400; color: rgba(255,255,255,.45); }
+.px-chips .cx-tabs { margin-bottom: 0; }
+.px-chips .cx-tab:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+.px-err { font-style: normal; font-size: 13px; color: #ff7a73; }
+.cx-field.bad input, .cx-field.bad textarea, .cx-field.bad select { border-color: #ff7a73; }
+.px-chips.bad .cx-tab:not(.on) { border-color: rgba(255,122,115,.55); }
+
+.px-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.px-steps { margin: 6px 0 0; padding: 0; list-style: none; counter-reset: pxs; display: flex; flex-direction: column; gap: 14px; }
+.px-steps li { counter-increment: pxs; position: relative; padding-left: 36px; font-size: 15px; line-height: 1.5; color: var(--mute); }
+.px-steps li b { color: var(--ink); }
+.px-steps li::before {
+  content: counter(pxs);
+  position: absolute; left: 0; top: 0;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--ink); color: #fff;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.px .cx-side { position: sticky; top: 100px; }
+@media (max-width: 960px) { .px .cx-side { position: static; flex-direction: column; } }
+
 /* contact details rail */
 .cx-side {
   display: flex;

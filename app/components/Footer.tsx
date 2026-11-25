@@ -32,6 +32,7 @@ export default function Footer() {
           <div className="ft-col">
             <span className="ft-col-head">Contact</span>
             <a href="/contact">Get in touch</a>
+            <a href="/partner">Partner with us</a>
             <a href="/contact?type=Book+a+Demo">Book a Demo</a>
             <a href="mailto:developer@redcross.or.ke">developer@redcross.or.ke</a>
           </div>

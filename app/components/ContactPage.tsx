@@ -115,6 +115,13 @@ export default function ContactPage() {
 
               <h2 className="cx-card-h">{HEADINGS[type]}</h2>
 
+              {type === "Partnership" && (
+                <p className="cx-note">
+                  Have a formal proposal? Use the{" "}
+                  <a href="/partner">partnership form</a> so we can review it properly.
+                </p>
+              )}
+
               <div className="cx-row">
                 <label className="cx-field">
                   <span>Full name</span>
